@@ -6,9 +6,13 @@ phases:
       - npm install
   build:
     commands:
+      - env
       - npm run compile
       - npm run test
       - cp package*.json dist/
+  post_build:
+    commands:
+      - env
 artifacts:
   base-directory: dist
   files:

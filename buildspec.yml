@@ -2,7 +2,6 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - env
       - npm install
   build:
     commands:
@@ -10,9 +9,6 @@ phases:
       - npm run compile
       - npm run test
       - cp package*.json dist/
-  post_build:
-    commands:
-      - env
 artifacts:
   base-directory: dist
   files:
